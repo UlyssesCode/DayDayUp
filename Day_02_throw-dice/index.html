@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0c6665cf91.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>扔骰子</title>
+  </head>
+  <body>
+    <button class="show-modal">规则</button>
+    <div class="line-a"></div>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>游戏规则</h1>
+      <p>
+        <li>
+          双方轮流掷骰子，此轮掷出的骰子点数总和为<strong>当前分数</strong>
+        </li>
+        <li>
+          玩家可在每一次掷骰子时选择继续掷骰子<strong>或者</strong>存放当前分数
+        </li>
+        <li>
+          若选择存放分数，则目前总分分数加上当前分数，同时轮到另一名玩家掷骰子
+        </li>
+        <li>
+          若掷骰子的时候掷出一点，则<strong>清空</strong>当前分数，同时轮到另一名玩家掷骰子
+        </li>
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">壹</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">当前</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">贰</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">当前</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" draggable="false" />
+      <button class="btn btn--new">
+        <i class="fa-solid fa-arrows-rotate fa-xl"></i>
+      </button>
+      <!-- <button class="btn btn--roll">🎲 扔骰子</button> -->
+      <button class="btn btn--hold">📥</button>
+    </main>
+    <div class="line-b"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
