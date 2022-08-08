@@ -6,4 +6,4 @@
 
 ## Day02 ThrowDice
 
-[双人扔骰子游戏｜在线预览](https://ulyssescode.com/daydayup/02throwdice/)
+[双人掷骰子游戏｜在线预览](https://ulyssescode.com/daydayup/02throwdice/)
